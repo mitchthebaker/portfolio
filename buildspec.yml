@@ -7,7 +7,7 @@ phases:
       - npm install 
   build:
     commands:
-      - npm react-scripts build 
+      - npm run-script build 
 
 artifacts:
   files:
