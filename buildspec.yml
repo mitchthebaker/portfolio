@@ -4,12 +4,10 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - npm install yarn
-      - yarn
-      - yarn add eslint-config-react-app
+      - npm install 
   build:
     commands:
-      - yarn build
+      - npm react-scripts build 
 
 artifacts:
   files:
