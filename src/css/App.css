@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "navbar navbar navbar navbar navbar"
+    "main main main main main"
+    "footer footer footer footer footer";
+}

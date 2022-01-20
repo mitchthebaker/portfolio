@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: 16px;
+}
+
+.cover-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
