@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <section className='home'>
-      <Slider slides={images}/>
+      <Slider slides={images} autoplay={5}/>
       <AboutContent />
     </section>
   );
