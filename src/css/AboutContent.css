@@ -1,3 +1,9 @@
 .about-content {
     margin: 15px;
 }
+
+.about-photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}

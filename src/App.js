@@ -9,12 +9,13 @@ import Navbar from './components/nav/Navbar';
 import './css/App.css';
 
 const App = () => {
+
   return (
     <main className='app'>
       <Navbar/>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Home/>}/>
+          <Route path='/' element={<Home />}/>
         </Routes>
       </Router>
     </main>
