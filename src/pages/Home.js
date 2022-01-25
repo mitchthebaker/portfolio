@@ -1,23 +1,32 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import React from 'react';
-//import HeroImage from '../components/content/HeroImage';
+import { Box } from '@mui/material';
 import Slider from '../components/slider/Slider';
 import AboutContent from '../components/content/AboutContent';
-import '../css/Home.css';
-import sunset from '../images/sunset.png';
-import pointreyes from '../images/pointreyes.png';
+
+import oceanBeach from '../images/oceanBeach.jpg';
+import ggBridge from '../images/ggBridge.jpg';
+import lisbon from '../images/lisbon.jpg';
+import twinPeaks from '../images/twinPeaks.jpg';
 
 const Home = () => {
 
   const images = [
-    sunset,
-    pointreyes
+    oceanBeach,
+    ggBridge,
+    lisbon,
+    twinPeaks
   ];
 
   return (
-    <section className='home'>
+    <Box css={css`
+      width: 100%;
+      grid-area: main;
+    `}>
       <Slider slides={images} autoplay={5}/>
       <AboutContent />
-    </section>
+    </Box>
   );
 };
 

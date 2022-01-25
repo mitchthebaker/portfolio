@@ -6,11 +6,10 @@ import PropTypes from 'prop-types';
 const Dot = ({ active }) => (
   <span
     css={css`
-      padding: 10px;
+      padding: 6px;
       margin-right: 5px;
-      cursor: pointer;
       border-radius: 50%;
-      background: ${active ? 'black' : 'white'};
+      background: ${active ? 'darkgrey' : 'white'};
     `}
   />
 );
@@ -23,7 +22,7 @@ const Dots = ({ slides, activeSlide }) => (
   <div
     css={css`
       position: absolute;
-      bottom: 25px;
+      bottom: 15px;
       width: 100%;
       display: flex;
       align-items: center;

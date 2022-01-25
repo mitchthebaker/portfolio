@@ -17,7 +17,8 @@ const Arrow = ({ direction, handleClick }) => (
       ${direction === 'right' ? 'right: 25px' : 'left: 25px'};
       width: 50px;
       height: 50px;
-      background: white;
+      font-size: 40px;
+      color: white;
       cursor: pointer;
       transition: transform ease-in 0.1s;
       &:hover {
