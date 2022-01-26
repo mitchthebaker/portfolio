@@ -10,7 +10,8 @@ const theme = createTheme({
       fontSize: 18,
       fontWeight: 600,
       color: 'white',
-      margin: '10px'
+      margin: '10px',
+      textShadow: '1px 1px grey'
     },
     h3: {
       fontFamily: 'Roboto',
@@ -24,15 +25,18 @@ const theme = createTheme({
         fontWeight: 500
       }
     },
+    date_h3: {
+      fontFamily: 'Roboto',
+      fontSize: 14,
+      color: 'white',
+      margin: '10px',
+    },
     h4: {
       fontFamily: 'Roboto',
       fontSize: 14,
       color: 'white',
       margin: '10px',
     }
-  },
-  navbarTitle: {
-
   }
 });
 

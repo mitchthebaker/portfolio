@@ -8,7 +8,7 @@ const AboutContent = () => {
   return (
     <Box css={css`
       width: 100%;
-      background: #bbc5d7;
+      background: #b3c2dd;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -23,12 +23,8 @@ const AboutContent = () => {
       <Typography variant='h2' css={css`
         font-size: 22px;
         font-weight: 800;
-        text-align: left;
-        margin-top: 0px;
-        padding: 15px 15px 15px;
-        @media (max-width: 600px) {
-          text-align: center;
-        }
+        margin: 0;
+        padding: 15px;
       `}
       > 
         About Me 
@@ -72,7 +68,7 @@ const AboutContent = () => {
           align-items: flex-start;
           text-align: left;
           @media (min-width: 600px) {
-            
+            margin-left: 15px;
           }
         `}>
           <Typography variant='h4'>
@@ -91,6 +87,12 @@ const AboutContent = () => {
           Thanks for stopping by! Feel free to check out my past projects or work experience. Reach out to me and get in touch if you would like to work together! 
           </Typography>
         </Box>
+      </Box>
+      <Box css={css`
+        width: 75%;
+        border-bottom: 1px solid white;
+        margin: 50px;
+      `}>
       </Box>
     </Box>
   );

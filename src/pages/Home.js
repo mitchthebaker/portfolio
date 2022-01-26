@@ -4,6 +4,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import Slider from '../components/slider/Slider';
 import AboutContent from '../components/content/AboutContent';
+import WorkContent from '../components/content/WorkContent';
 
 import oceanBeach from '../images/oceanBeach.jpg';
 import ggBridge from '../images/ggBridge.jpg';
@@ -26,6 +27,7 @@ const Home = () => {
     `}>
       <Slider slides={images} autoplay={5}/>
       <AboutContent />
+      <WorkContent />
     </Box>
   );
 };
