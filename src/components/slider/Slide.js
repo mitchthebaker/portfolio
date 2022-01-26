@@ -12,6 +12,7 @@ const Slide = ({ content }) => (
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      filter: brightness(90%);
     `}
   />
 );
