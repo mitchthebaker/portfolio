@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Buttons from './Buttons';
-import '../../css/HeroImage.css';
 
 const Wrapper = styled.div`
   position: relative;

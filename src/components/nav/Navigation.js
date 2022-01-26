@@ -2,7 +2,6 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import '../../css/Navigation.css';
 
 const Navigation = () => {
   return (

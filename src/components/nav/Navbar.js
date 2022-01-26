@@ -4,7 +4,6 @@ import React from 'react';
 import { Container } from '@mui/material';
 import Logo from './Logo';
 import Navigation from './Navigation';
-import '../../css/Navbar.css';
 
 const Navbar = () => {
   return (

@@ -16,7 +16,19 @@ const theme = createTheme({
       fontFamily: 'Roboto',
       fontSize: 14,
       color: 'white',
-      margin: '10px'
+      margin: '10px',
+      cursor: 'pointer',
+      transition: 'transform ease-in 0.1s',
+      '&:hover': {
+        transform: 'scale(1.1)',
+        fontWeight: 500
+      }
+    },
+    h4: {
+      fontFamily: 'Roboto',
+      fontSize: 14,
+      color: 'white',
+      margin: '10px',
     }
   },
   navbarTitle: {

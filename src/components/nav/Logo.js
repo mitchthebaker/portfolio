@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import React from 'react';
 import { Box, Avatar, Typography } from '@mui/material';
 import mbaker from '../../images/mbaker.jpg';
-import '../../css/Logo.css';
 
 const Logo = () => {
   return (
@@ -33,17 +32,3 @@ const Logo = () => {
 };
 
 export default Logo;
-
-/*
-<div css={css`
-        width: 50px;
-        height: 50px;
-        background-image: url(${mbaker});
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 50%;
-      `}>
-
-      </div>
-*/

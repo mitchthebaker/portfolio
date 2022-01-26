@@ -30,6 +30,9 @@ const Arrow = ({ direction, handleClick }) => (
             outline: 0;
         }
       }
+      @media (max-width: 500px) {
+        ${direction === 'right' ? 'right: 5px' : 'left: 5px'};
+      }
     `}
   >
     {direction === 'right' ? <FontAwesomeIcon icon={faChevronRight}/> : <FontAwesomeIcon icon={faChevronLeft}/>}
