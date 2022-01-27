@@ -6,6 +6,7 @@ import SliderContent from './SliderContent';
 import Slide from './Slide';
 import Arrow from './Arrow';
 import Dots from './Dots';
+import Title from './Title';
 
 const getWidth = () => window.innerWidth;
 
@@ -139,6 +140,7 @@ const Slider = ({ slides, autoplay }) => {
       <Arrow direction='right' handleClick={nextSlide}/>
 
       <Dots slides={slides} activeSlide={activeSlide}/>
+      <Title />
     </div>
   );
 };

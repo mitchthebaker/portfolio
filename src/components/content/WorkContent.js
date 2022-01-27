@@ -49,6 +49,9 @@ const WorkContent = () => {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      grid-area: main;
+      background: #b3c2dd;
+      padding: 115px 0px;
     `}>
       <Typography variant='h2' css={css`
         font-size: 22px;

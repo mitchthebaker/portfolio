@@ -12,31 +12,28 @@ import theme from './ui/Theme';
 import Home from './pages/Home';
 import Navbar from './components/nav/Navbar';
 import Footer from './components/footer/Footer';
+import WorkContent from './components/content/WorkContent';
+import ProjectContent from './components/content/ProjectContent';
+import Connect from './components/content/Connect';
 
 const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box css={css`
-        position: relative;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 40px 50px auto 50px 40px;
-        grid-template-rows: auto;
-        grid-template-areas: 
-          ". . navbar . ."
-          "main main main main main"
-          "footer footer footer footer footer";
-        justify-items: center;
-      `}>
-        <Navbar />
-        <Router>
+      <Router>
+        <Box css={css`
+          position: relative;
+        `}>
+          <Navbar />
           <Routes>
             <Route path='/' element={<Home />}/>
+            <Route path='/work' element={<WorkContent />}/>
+            <Route path='/projects' element={<ProjectContent />}/>
+            <Route path='/connect' element={<Connect />}/>
           </Routes>
-        </Router>
-        <Footer />
-      </Box>
+          <Footer />
+        </Box>
+      </Router>
     </ThemeProvider>
   );
 };

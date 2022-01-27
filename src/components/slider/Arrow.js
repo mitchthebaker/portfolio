@@ -2,8 +2,7 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Arrow = ({ direction, handleClick }) => (
   <div
@@ -35,7 +34,7 @@ const Arrow = ({ direction, handleClick }) => (
       }
     `}
   >
-    {direction === 'right' ? <FontAwesomeIcon icon={faChevronRight}/> : <FontAwesomeIcon icon={faChevronLeft}/>}
+    {direction === 'right' ? <FaChevronRight /> : <FaChevronLeft />}
   </div>
 );
 

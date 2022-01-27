@@ -4,8 +4,6 @@ import React from 'react';
 import { Box } from '@mui/material';
 import Slider from '../components/slider/Slider';
 import AboutContent from '../components/content/AboutContent';
-import WorkContent from '../components/content/WorkContent';
-import ProjectContent from '../components/content/ProjectContent';
 
 import oceanBeach from '../images/oceanBeach.jpg';
 import ggBridge from '../images/ggBridge.jpg';
@@ -26,12 +24,10 @@ const Home = () => {
       width: 100%;
       grid-area: main;
       background: #b3c2dd;
-      padding-bottom: 60px;
+      padding-bottom: 100px;
     `}>
       <Slider slides={images} autoplay={5}/>
       <AboutContent />
-      <WorkContent />
-      <ProjectContent />
     </Box>
   );
 };

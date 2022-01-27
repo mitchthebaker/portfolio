@@ -42,6 +42,7 @@ const Experience = ({ photo, alt, title, chips, date, description }) => {
         <Typography variant='h4' css={css`
           font-size: 16px;
           font-weight: 800;
+          text-align: center;
         `}> 
           {title} 
         </Typography>
@@ -66,7 +67,11 @@ const Experience = ({ photo, alt, title, chips, date, description }) => {
             />
           ))}
         </Box>
-        <Typography variant='h4'>{date}</Typography>
+        <Typography variant='h4' css={css`
+          text-align: center;
+        `}>
+          {date}
+        </Typography>
         <Typography variant='h4' css={css`
           text-align: center;
         `}>

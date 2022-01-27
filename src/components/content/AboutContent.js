@@ -1,8 +1,19 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+// images
 import aboutPhoto from '../../images/about-photo.png';
+
+const button = css`
+  font-size: 40px;
+  margin: 25px 50px;
+  @media (max-width: 500px) {
+    margin: 5px 15px;
+  }
+`;
 
 const AboutContent = () => {
   return (
@@ -71,7 +82,7 @@ const AboutContent = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
+          align-items: center;
           text-align: center;
           @media (min-width: 500px) {
             margin-left: 15px;
@@ -93,8 +104,23 @@ const AboutContent = () => {
             while also having fun setting up CI/CD pipelines, remote servers, and other devops related tasks.
           </Typography>
           <Typography variant='h4'>
-          Thanks for stopping by! Feel free to check out my past projects or work experience. Reach out to me and get in touch if you would like to work together! 
+          Thanks for stopping by! Feel free to check out my work experience or past projects. Reach out to me and get in touch if you would like to work together! 
           </Typography>
+          <Box css={css`
+            display: flex;
+            flex-direction: row;
+            flex-wrap: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            @media (max-width: 500px) {
+              margin-top: 25px;
+            }
+          `}>
+            <Button href="mailto:mitchthebaker@protonmail.com" css={button}> <FaEnvelope /> </Button>
+            <Button href="https://www.linkedin.com/in/mitchel-baker-146768146/" css={button}> <FaLinkedin /> </Button>
+            <Button href="https://github.com/mitchthebaker" css={button}> <FaGithub /> </Button>
+          </Box>
         </Box>
       </Box>
       <Box css={css`
@@ -108,3 +134,4 @@ const AboutContent = () => {
 };
 
 export default AboutContent;
+

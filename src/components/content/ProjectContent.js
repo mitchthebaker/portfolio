@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ExpContainer from './ExpContainer';
 
+// images
 import csc600App from '../../images/csc600-app.png';
 import csc675Discord from '../../images/csc675-discord.png';
 import csc648Site from '../../images/csc648-site.png';
@@ -101,11 +102,14 @@ const ProjectContent = () => {
 
   return (
     <Box css={css`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-area: main;
+      background: #b3c2dd;
+      padding: 115px 0px;
     `}>
       <Typography variant='h2' css={css`
         font-size: 22px;
@@ -125,6 +129,12 @@ const ProjectContent = () => {
         width: 90%;
       `}>
         <ExpContainer workExp={workExp}/>
+      </Box>
+      <Box css={css`
+        width: 85%;
+        border-bottom: 1px solid white;
+        margin: 50px;
+      `}>
       </Box>
     </Box>
   );
