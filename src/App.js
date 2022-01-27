@@ -11,12 +11,14 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './ui/Theme';
 import Home from './pages/Home';
 import Navbar from './components/nav/Navbar';
+import Footer from './components/footer/Footer';
 
 const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
       <Box css={css`
+        position: relative;
         width: 100%;
         display: grid;
         grid-template-columns: 40px 50px auto 50px 40px;
@@ -33,6 +35,7 @@ const App = () => {
             <Route path='/' element={<Home />}/>
           </Routes>
         </Router>
+        <Footer />
       </Box>
     </ThemeProvider>
   );

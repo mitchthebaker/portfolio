@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ExpContainer from './ExpContainer';
+
 import veevApp from '../../images/veev-app.png';
 import heartbleedApp from '../../images/heartbleed-app.png';
 
@@ -44,7 +45,6 @@ const WorkContent = () => {
   return (
     <Box css={css`
       width: 100%;
-      background: #b3c2dd;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -68,6 +68,12 @@ const WorkContent = () => {
         width: 90%;
       `}>
         <ExpContainer workExp={workExp}/>
+      </Box>
+      <Box css={css`
+        width: 85%;
+        border-bottom: 1px solid white;
+        margin: 50px;
+      `}>
       </Box>
     </Box>
   );

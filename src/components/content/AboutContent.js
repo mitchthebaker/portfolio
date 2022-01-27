@@ -8,7 +8,6 @@ const AboutContent = () => {
   return (
     <Box css={css`
       width: 100%;
-      background: #b3c2dd;
       display: flex;
       flex-direction: column;
       justify-content: center;
