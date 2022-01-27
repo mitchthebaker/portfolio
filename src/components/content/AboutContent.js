@@ -14,10 +14,10 @@ const AboutContent = () => {
       justify-content: center;
       align-items: center;
       @media (max-width: 1000px) {
-        padding: 45px 0px;
+        padding: 45px 0px 0px 0px;
       }
       @media (min-width: 1000px) {
-        padding: 100px 0px;
+        padding: 100px 0px 0px 0px;
       }
     `}>
       <Typography variant='h2' css={css`
@@ -33,13 +33,20 @@ const AboutContent = () => {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
-        align-items: flex-start;
-        max-width: 1000px;
+        align-items: center;
+        max-width: 700px;
         margin: 15px;
-        @media (max-width: 600px) {
+        width: 90%;
+        @media (max-width: 768px) {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+        @media (min-width: 600px) {
+          max-width: 900px;
+        }
+        @media (min-width: 1400px) {
+          max-width: 1000px;
         }
       `}>
         <img
@@ -51,13 +58,13 @@ const AboutContent = () => {
             height: auto;
             border: 1px solid white;
             border-radius: 5px;
-            @media (max-width: 600px) {
+            @media (max-width: 768px) {
               margin: 15px;
             }
-            @media (min-width: 600px) {
+            @media (min-width: 768px) {
               max-width: 250px;
               margin-left: auto;
-              margin-right: 15px;
+              
             }
           `}
         />
@@ -66,9 +73,12 @@ const AboutContent = () => {
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          text-align: left;
-          @media (min-width: 600px) {
+          text-align: center;
+          @media (min-width: 500px) {
             margin-left: 15px;
+          }
+          @media (min-width: 1000px) {
+            margin: 0px 50px 0px 15px;
           }
         `}>
           <Typography variant='h4'>
@@ -89,7 +99,7 @@ const AboutContent = () => {
         </Box>
       </Box>
       <Box css={css`
-        width: 75%;
+        width: 85%;
         border-bottom: 1px solid white;
         margin: 50px;
       `}>

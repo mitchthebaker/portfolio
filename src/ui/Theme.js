@@ -29,7 +29,6 @@ const theme = createTheme({
       fontFamily: 'Roboto',
       fontSize: 14,
       color: 'white',
-      margin: '10px',
     },
     h4: {
       fontFamily: 'Roboto',
