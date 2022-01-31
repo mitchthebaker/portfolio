@@ -19,7 +19,7 @@ const SliderCSS = css`
 `;
 
 const Slider = ({ slides, autoplay }) => {
-  const autoplayRef = useRef();
+  /*const autoplayRef = useRef();
   const transitionRef = useRef();
   const resizeRef = useRef();
 
@@ -122,6 +122,60 @@ const Slider = ({ slides, autoplay }) => {
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
       translate: 0
     });
+  };*/
+
+  const [state, setState] = useState({
+    activeSlide: 0,
+    translate: 0,
+    transition: 0.45
+  });
+
+  const { translate, transition, activeSlide } = state;
+  const autoPlayRef = useRef();
+
+  useEffect(() => {
+    autoPlayRef.current = nextSlide;
+  });
+
+  useEffect(() => {
+    const play = () => {
+      autoPlayRef.current();
+    };
+
+    const interval = setInterval(play, autoplay * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    if (activeSlide === slides.length - 1) {
+      return setState({
+        ...state,
+        translate: 0,
+        activeSlide: 0
+      });
+    }
+
+    setState({
+      ...state,
+      activeSlide: activeSlide + 1,
+      translate: (activeSlide + 1) * getWidth()
+    });
+  };
+
+  const prevSlide = () => {
+    if (activeSlide === 0) {
+      return setState({
+        ...state,
+        translate: (slides.length - 1) * getWidth(),
+        activeSlide: slides.length - 1
+      });
+    }
+
+    setState({
+      ...state,
+      activeSlide: activeSlide - 1,
+      translate: (activeSlide - 1) * getWidth()
+    });
   };
 
   return (
@@ -129,10 +183,10 @@ const Slider = ({ slides, autoplay }) => {
       <SliderContent
         translate={translate}
         transition={transition}
-        width={getWidth() * _slides.length}
+        width={getWidth() * slides.length}
       >
-        {_slides.map((_slide, i) => (
-          <Slide width={getWidth()} key={_slide + i} content={_slide} />
+        {slides.map((slide, i) => (
+          <Slide width={getWidth()} key={slide + i} content={slide} />
         ))}
       </SliderContent>
 
