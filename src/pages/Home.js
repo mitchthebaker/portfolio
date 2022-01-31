@@ -5,10 +5,10 @@ import { Box } from '@mui/material';
 import Slider from '../components/slider/Slider';
 import AboutContent from '../components/content/AboutContent';
 
-import oceanBeach from '../images/oceanBeach.jpg';
-import ggBridge from '../images/ggBridge.jpg';
-import lisbon from '../images/lisbon.jpg';
-import twinPeaks from '../images/twinPeaks.jpg';
+import oceanBeach from './images/oceanBeach.jpg';
+import ggBridge from './images/ggBridge.jpg';
+import lisbon from './images/lisbon.jpg';
+import twinPeaks from './images/twinPeaks.jpg';
 
 const Home = () => {
 
