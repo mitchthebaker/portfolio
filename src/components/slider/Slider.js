@@ -13,7 +13,7 @@ const getWidth = () => window.innerWidth;
 const SliderCSS = css`
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 `;
@@ -124,6 +124,9 @@ const Slider = ({ slides, autoplay }) => {
     });
   };*/
 
+  const autoplayRef = useRef();
+  const resizeRef = useRef();
+
   const [state, setState] = useState({
     activeSlide: 0,
     translate: 0,
@@ -131,34 +134,35 @@ const Slider = ({ slides, autoplay }) => {
   });
 
   const { translate, transition, activeSlide } = state;
-  const autoPlayRef = useRef();
+  
 
   useEffect(() => {
-    autoPlayRef.current = nextSlide;
+    autoplayRef.current = nextSlide;
+    resizeRef.current = handleResize;
   });
 
   useEffect(() => {
     const play = () => {
-      autoPlayRef.current();
+      autoplayRef.current();
+    };
+
+    const resize = () => {
+      resizeRef.current();
     };
 
     const interval = setInterval(play, autoplay * 1000);
-    return () => clearInterval(interval);
+    const onResize = window.addEventListener('resize', resize);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
-  const nextSlide = () => {
-    if (activeSlide === slides.length - 1) {
-      return setState({
-        ...state,
-        translate: 0,
-        activeSlide: 0
-      });
-    }
-
+  const handleResize = () => {
     setState({
       ...state,
-      activeSlide: activeSlide + 1,
-      translate: (activeSlide + 1) * getWidth()
+      translate: getWidth(),
+      transition: 0
     });
   };
 
@@ -175,6 +179,22 @@ const Slider = ({ slides, autoplay }) => {
       ...state,
       activeSlide: activeSlide - 1,
       translate: (activeSlide - 1) * getWidth()
+    });
+  };
+
+  const nextSlide = () => {
+    if (activeSlide === slides.length - 1) {
+      return setState({
+        ...state,
+        translate: 0,
+        activeSlide: 0
+      });
+    }
+
+    setState({
+      ...state,
+      activeSlide: activeSlide + 1,
+      translate: (activeSlide + 1) * getWidth()
     });
   };
 

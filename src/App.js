@@ -23,6 +23,7 @@ const App = () => {
       <Router>
         <Box css={css`
           position: relative;
+          background: #b3c2dd;
         `}>
           <Navbar />
           <Routes>

@@ -2,33 +2,19 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Dot from './Dot';
 
-const Dot = ({ active }) => (
-  <span
-    css={css`
-      padding: 6px;
-      margin-right: 5px;
-      border-radius: 50%;
-      background: ${active ? 'darkgrey' : 'white'};
-    `}
-  />
-);
-
-Dot.propTypes = {
-  active: PropTypes.bool.isRequired
-};
+const DotsCSS = css`
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Dots = ({ slides, activeSlide }) => (
-  <div
-    css={css`
-      position: absolute;
-      bottom: 15px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    `}
-  >
+  <div css={DotsCSS}>
     {slides.map((slide, i) => (
       <Dot key={slide} active={activeSlide === i}/>
     ))}

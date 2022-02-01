@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ExpContainer from './ExpContainer';
+import { WrapperCSS, ContentCustomH2CSS, ContentCustomBox1CSS, Separator } from '../../ui/Emotion';
 
 import veevApp from '../../images/veev-app.png';
 import heartbleedApp from '../../images/heartbleed-app.png';
@@ -43,81 +43,17 @@ const WorkContent = () => {
   ];
 
   return (
-    <Box css={css`
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      grid-area: main;
-      background: #b3c2dd;
-      padding: 115px 0px;
-    `}>
-      <Typography variant='h2' css={css`
-        font-size: 22px;
-        font-weight: 800;
-        margin: 0;
-        padding: 15px;
-      `}>
+    <Box css={WrapperCSS}>
+      <Typography variant='h2' css={ContentCustomH2CSS}>
         Work Experience
       </Typography>
-      <Box css={css`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        margin: 15px;
-        width: 90%;
-      `}>
+      <Box css={ContentCustomBox1CSS}>
         <ExpContainer workExp={workExp}/>
       </Box>
-      <Box css={css`
-        width: 85%;
-        border-bottom: 1px solid white;
-        margin: 50px;
-      `}>
+      <Box css={Separator}>
       </Box>
     </Box>
   );
 };
 
 export default WorkContent; 
-
-/* 
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-<Timeline position='left'>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot css={css`
-                background: white;
-              `}/>
-              <TimelineConnector css={css`
-                background: white;
-              `}/>
-            </TimelineSeparator>
-            <TimelineContent variant='date_h3'>Jun 2021</TimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot css={css`
-                background: white;
-              `}/>
-              <TimelineConnector css={css`
-                background: white;
-              `}/>
-            </TimelineSeparator>
-            <TimelineContent variant='date_h3'>May 2019</TimelineContent>
-          </TimelineItem>
-        </Timeline>
-        <Box>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Box>
-*/

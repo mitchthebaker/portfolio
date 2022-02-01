@@ -3,17 +3,17 @@ import { css } from '@emotion/react';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SliderContent = props => (
+const SliderContent = ({ translate, transition, width, children }) => (
   <div
     css={css`
-      transform: translateX(-${props.translate}px);
-      transition: transform ease-out ${props.transition}s;
+      transform: translateX(-${translate}px);
+      transition: transform ease-out ${transition}s;
       height: 100%;
-      width: ${props.width}px;
+      width: ${width}px;
       display: flex;
     `}
   >
-    {props.children}
+    {children}
   </div>
 );
 

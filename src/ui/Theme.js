@@ -8,7 +8,7 @@ const theme = createTheme({
       fontWeight: 600,
       color: 'white',
       margin: '10px',
-      textShadow: '3px 3px grey',
+      textShadow: '3px 3px #4c4c4c',
     },
     h2: {
       fontFamily: 'Roboto',
@@ -16,7 +16,7 @@ const theme = createTheme({
       fontWeight: 600,
       color: 'white',
       margin: '10px',
-      textShadow: '1px 1px grey',
+      textShadow: '1px 1px #4c4c4c',
     },
     h3: {
       fontFamily: 'Roboto',
@@ -41,13 +41,14 @@ const theme = createTheme({
       fontWeight: 400,
       color: 'white',
       margin: '0px 10px',
-      textShadow: '3px 3px grey',
+      textShadow: '1px 1px #4c4c4c',
     },
     h4: {
       fontFamily: 'Roboto',
       fontSize: 14,
       color: 'white',
       margin: '10px',
+      textAlign: 'center'
     }
   }
 });

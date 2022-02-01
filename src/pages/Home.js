@@ -10,6 +10,13 @@ import ggBridge from '../images/ggBridge.jpg';
 import lisbon from '../images/lisbon.jpg';
 import twinPeaks from '../images/twinPeaks.jpg';
 
+const HomeCSS = css`
+  width: 100%;
+  grid-area: main;
+  background: #b3c2dd;
+  padding-bottom: 100px;
+`;
+
 const Home = () => {
 
   const images = [
@@ -20,12 +27,7 @@ const Home = () => {
   ];
 
   return (
-    <Box css={css`
-      width: 100%;
-      grid-area: main;
-      background: #b3c2dd;
-      padding-bottom: 100px;
-    `}>
+    <Box css={HomeCSS}>
       <Slider slides={images} autoplay={5}/>
       <AboutContent />
     </Box>
