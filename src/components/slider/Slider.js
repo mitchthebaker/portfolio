@@ -161,8 +161,8 @@ const Slider = ({ slides, autoplay }) => {
   const handleResize = () => {
     setState({
       ...state,
-      translate: getWidth(),
-      transition: 0
+      translate: 0,
+      transition: 0.45
     });
   };
 
