@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Typography, Chip } from '@mui/material';
+//import LazyImage from '../img/LazyImage';
 
 const ExperienceCSS = css`
   display: flex;

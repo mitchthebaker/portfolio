@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+//import LazyImage from '../img/LazyImage';
 
 // images
 import aboutPhoto from '../../images/about-photo.png';
