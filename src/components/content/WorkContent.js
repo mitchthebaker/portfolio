@@ -4,12 +4,30 @@ import { Box, Typography } from '@mui/material';
 import ExpContainer from './ExpContainer';
 import { WrapperCSS, ContentCustomH2CSS, ContentCustomBox1CSS, Separator } from '../../ui/Emotion';
 
+import firstDigital from '../../images/firstdigital-app.png';
 import veevApp from '../../images/veev-app.png';
 import heartbleedApp from '../../images/heartbleed-app.png';
 
 const WorkContent = () => {
 
   const workExp = [
+    {
+      name: 'First2UMedia, generate high quality leads for your business.',
+      photo: firstDigital,
+      alt: 'First2UMedia, generate high quality leads for your business.',
+      title: 'First2UMedia, generate high quality leads for your business',
+      chips: [
+        'HTML/CSS',
+        'Typescript',
+        'React',
+        'Material UI',
+        'Google Maps API',
+        'CI/CD',
+        'DigitalOcean App Platform',
+      ],
+      date: 'Apr 2022 - Present',
+      description: 'Led the redesign of a new website, complete with modular and scalable components built with React/Typescript. Rendered a heatmap with the Google Maps API to depict the intensity of geographical data across the United States, and provided DNS and hosting solutions over a CDN through the DigitalOcean App Platform.'
+    },
     {
       name: 'Veev',
       photo: veevApp,
