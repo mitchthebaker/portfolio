@@ -1,15 +1,17 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      nodejs: 12
-    commands:
-      - npm install 
-  build:
-    commands:
-      - npm run-script build 
-
-artifacts:
-  files:
-    - '**/*'
-  base-directory: 'build'
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: portfolio
+region: nyc
+static_sites:
+- build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: mitchthebaker/portfolio
+  catchall_document: index.html
+  name: portfolio
+  routes:
+  - path: /
+  source_dir: /
