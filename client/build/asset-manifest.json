@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a3da3e9a.css",
+    "main.js": "/static/js/main.3163a6ea.js",
+    "static/js/787.86e70ff7.chunk.js": "/static/js/787.86e70ff7.chunk.js",
+    "static/media/lisbon.jpg": "/static/media/lisbon.c5fa2b1dcc63a9b7bb65.jpg",
+    "static/media/ggBridge.jpg": "/static/media/ggBridge.1389b43ed33179fee9ec.jpg",
+    "static/media/twinPeaks.jpg": "/static/media/twinPeaks.28d4c7a7ed547dee00d7.jpg",
+    "static/media/oceanBeach.jpg": "/static/media/oceanBeach.9ab58b91cdfad0bfb3c9.jpg",
+    "static/media/firstdigital-app.png": "/static/media/firstdigital-app.13a187d085c05e09d1cc.png",
+    "static/media/heartbleed-app.png": "/static/media/heartbleed-app.51d8270b84f1f5bd8eef.png",
+    "static/media/resume.png": "/static/media/resume.343d0680f86528d8afa5.png",
+    "static/media/mbaker.jpg": "/static/media/mbaker.83c0f16db17a9d42c90c.jpg",
+    "static/media/biconvex-app.png": "/static/media/biconvex-app.91ef108b14238c5f0ffd.png",
+    "static/media/flashpass-app.png": "/static/media/flashpass-app.d0faf3d39be81585802e.png",
+    "static/media/csc648-site.png": "/static/media/csc648-site.2a95e4a9a3f596e8e1d3.png",
+    "static/media/csc415-filesystem.png": "/static/media/csc415-filesystem.fc95d888580f4fcf7267.png",
+    "static/media/about-photo.png": "/static/media/about-photo.1551c7b87f46f48735ea.png",
+    "static/media/veev-app.png": "/static/media/veev-app.bf22c8b45b6e8697499c.png",
+    "static/media/csc675-discord.png": "/static/media/csc675-discord.e58da3f4fc8d2f9f1040.png",
+    "static/media/baker_resume.pdf": "/static/media/baker_resume.c3a375017ef1e0c1c6ee.pdf",
+    "static/media/csc600-app.png": "/static/media/csc600-app.b4f482b82ab235386c07.png",
+    "index.html": "/index.html",
+    "main.a3da3e9a.css.map": "/static/css/main.a3da3e9a.css.map",
+    "main.3163a6ea.js.map": "/static/js/main.3163a6ea.js.map",
+    "787.86e70ff7.chunk.js.map": "/static/js/787.86e70ff7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3da3e9a.css",
+    "static/js/main.3163a6ea.js"
+  ]
+}
