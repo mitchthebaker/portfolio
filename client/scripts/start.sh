@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ "$NODE_ENV" == "production"] ; then
-  npm start
+  npm run build
 else
   npm start
 fi
