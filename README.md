@@ -1,29 +1,10 @@
+# Landing site for mitchelbaker.com 
 
+### todos
 
-## Available Scripts
+- develop branch setup with docker-compose and client app. next step is to setup nginx server block for mitchelbaker.com and be able to see client running. 
+- will need to create separate server blocks for mitchelbaker.com (perhaps staging.mitchelbaker.com), and for photos.mitchelbaker.com
+- site deployed on remote host, but need to make it set to the correct branch for pipeline purposes. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+### workflow 
+- changes made locally go onto develop. Once I want to test these changes, push to staging. Only from staging are changes merged into main by a pull request.
