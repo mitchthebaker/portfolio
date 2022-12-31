@@ -4,7 +4,11 @@ import React from 'react';
 // sass 
 import '../../sass/layout/_standardlayout.scss';
 
-const StandardLayout = ({ children }) => {
+interface IStandardLayout {
+  children: React.ReactNode;
+}
+
+const StandardLayout = ({ children }: IStandardLayout) => {
   
   /**
    * Should end up being something like this:

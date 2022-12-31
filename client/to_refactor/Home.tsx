@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+/*import { css } from '@emotion/react';
 import React from 'react';
 import { Box } from '@mui/material';
 import Slider from '../components/slider/Slider';
@@ -34,4 +34,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home; */
