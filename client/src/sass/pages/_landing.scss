@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+.landing {
+  @include grid-column(col2, col3);
+  @include grid-row(row2, row3);
+  @include flex(column, center, center, nowrap);
+}

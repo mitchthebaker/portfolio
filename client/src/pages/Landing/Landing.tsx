@@ -1,10 +1,14 @@
 // libraries
 import React from 'react';
+import { Box } from '@mui/material';
 
-const Landing = () => {
+// sass 
+import '../../sass/pages/_landing.scss';
+
+const Landing = (): JSX.Element => {
   return (
-    <section>
-    </section>
+    <Box className='landing'>
+    </Box>
   );
 };
 

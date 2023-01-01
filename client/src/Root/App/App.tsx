@@ -38,7 +38,7 @@ const routes = [
   }
 ];
 
-const App = () => {
+const App = (): JSX.Element => {
 
   return (
     <Router>
