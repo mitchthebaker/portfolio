@@ -1,4 +1,5 @@
 @import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 .landing {
   @include grid-column(col2, col3);
@@ -22,3 +23,116 @@
   background: linear-gradient(0deg,#1E1E1E,#000512);
   -webkit-background: linear-gradient(0deg,#1E1E1E,#000512);
 }
+
+.parallax--image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  //perspective: 500px;
+
+    & div {
+      width: 300px;
+      height: 400px;
+      position: relative;
+      max-height: 90vh;
+      margin: 20px;
+      background: var(--white);
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+}
+
+.hero__container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  & .hero__video {
+    width: 100%;
+    height: 100%;
+  
+    &--placeholder {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+  
+    & video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include flex(column, flex-end, flex-start, wrap);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    & h1 {
+      font-weight: 300;
+    }
+
+    & .parallax__text {
+      @include flex(row, center, center, nowrap);
+      overflow: hidden;
+      letter-spacing: -2px;
+      line-height: 0.8;
+      margin: 0;
+      white-space: nowrap;
+
+      &--scroller {
+        @include flex(row, center, center, nowrap);
+        overflow: hidden;
+        font-size: 52px;
+        color: white;
+        white-space: nowrap;
+
+        & span {
+          padding-left: 20rem;
+        }
+      }
+    }
+
+    &__content {
+      @include flex(column, center, flex-start, wrap);
+      width: 100%;
+      margin: 0.5rem 0.5rem 2rem 0.5rem;
+
+      & .arrow__right__down {
+        width: 30px;
+        height: 30px;
+      }
+
+      &__description {
+        @include flex(row, flex-start, center, nowrap);
+
+        & div {
+          & h2 {
+            @include font-size($h2-font-sizes);
+            margin: 0.5rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+

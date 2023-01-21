@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+.footer {
+  @include grid-column(col2, col3);
+  @include grid-row(row3, row4);
+  min-height: 350px;
+}

@@ -1,41 +1,91 @@
 // libraries
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box } from '@mui/material';
+import { 
+  motion, 
+  useAnimation,
+  useSpring,
+  useScroll,
+  useTransform,
+  MotionValue
+} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // sass 
 import '../../sass/pages/_landing.scss';
+import '../../sass/components/_image.scss';
 
 // components 
-//import Image from '../../components/Image';
+import Image from '../../components/Image';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+import Video from '../../components/Video';
+import FadeContainer from '../../components/FadeContainer';
+import ParallaxText from '../../components/ParallaxText';
 
 // images 
 import ggBridge from './ggBridge.jpg';
 import lisbonCathedral from './lisbon.jpg';
+import techPurple from './technology-purple.mp4';
+import techPurplePlaceholder from './technology-purple-placeholder.png';
 
-/*const mockText = [
-  {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex dolor, cursus quis suscipit a, suscipit et tortor. Mauris vitae iaculis erat. Donec pharetra lorem nec turpis tincidunt mollis. Nullam in odio ipsum. Pellentesque sodales orci sit amet nunc feugiat posuere. Suspendisse molestie aliquet mi eu laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lorem elit. Suspendisse nulla mi, porta at tellus dignissim, vehicula pellentesque mi.',
-    speed: -10
-  },
-  {
-    text: 'Proin enim quam, finibus porttitor egestas sit amet, ultricies non urna. Vestibulum nibh nulla, mattis ut hendrerit et, feugiat vitae purus. Vivamus nec urna vehicula, congue sem non, mattis lorem. Proin sed posuere nisl. Mauris at ante fringilla, commodo purus nec, euismod felis. Sed tempus pharetra luctus. Vivamus porta nec diam quis pellentesque. Quisque velit mauris, molestie vel felis et, ultrices placerat lorem. Etiam ac fermentum magna, eu gravida nunc. Integer quis nulla rutrum odio rutrum tempor ac eget ligula. Proin bibendum enim vitae tortor accumsan egestas. Proin semper turpis at libero suscipit, nec accumsan justo facilisis.',
-    speed: -30
-  },
-  {
-    text: 'Proin enim quam, finibus porttitor egestas sit amet, ultricies non urna. Vestibulum nibh nulla, mattis ut hendrerit et, feugiat vitae purus. Vivamus nec urna vehicula, congue sem non, mattis lorem. Proin sed posuere nisl. Mauris at ante fringilla, commodo purus nec, euismod felis. Sed tempus pharetra luctus. Vivamus porta nec diam quis pellentesque. Quisque velit mauris, molestie vel felis et, ultrices placerat lorem. Etiam ac fermentum magna, eu gravida nunc. Integer quis nulla rutrum odio rutrum tempor ac eget ligula. Proin bibendum enim vitae tortor accumsan egestas. Proin semper turpis at libero suscipit, nec accumsan justo facilisis.',
-    speed: -50
-  },
-  {
-    text: 'Donec eu nibh iaculis justo mattis varius vitae non augue. Sed in justo non erat volutpat facilisis non sit amet felis. Ut sed facilisis nulla. Donec tempus ultrices risus, eu iaculis sem porta laoreet. In semper lacus sed lobortis tempor. Curabitur ac ligula lectus. Cras sit amet erat id orci varius vulputate vel non quam. Praesent vehicula sem orci, in molestie nisl accumsan non. Sed vulputate tellus a dolor posuere, nec convallis tortor interdum. Sed a laoreet turpis. Nullam augue velit, venenatis sit amet erat eget, ornare euismod erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus rutrum ipsum ut mauris vehicula, et luctus elit iaculis. Ut semper, nisi eu pretium commodo, ipsum ipsum tempus nisi, sit amet varius metus nulla non dui. Vestibulum vel turpis posuere, facilisis libero sed, euismod enim.',
-    speed: -70
-  },
-];*/
+import arrowRightDown from '../../assets/images/arrow-right-down.svg';
+
+const parallaxContentVariant = {
+  visible: { opacity: 1, scale: 2 },
+  hidden: { opacity: 0, scale: 0 },
+};
 
 const Landing = (): JSX.Element => {
+
   return (
     <Box className='landing'>
       <ParallaxProvider>
+        <Box className='hero__container'>
+          <Video 
+            src={techPurple}
+            placeholder={techPurplePlaceholder}
+            placeholderAlt={'Purple shapes flexing and moving'}
+            className={'hero__video'}
+          />
+          <Box className='hero__container__overlay'>
+            <ParallaxText baseVelocity={-2}>
+              <h1> Mitchel Baker — </h1>
+            </ParallaxText>
+            <Box className='hero__container__overlay__content'>
+              <Image 
+                src={arrowRightDown}
+                alt={'Arrow angled right and down'}
+                className={'arrow__right__down'}
+              />
+              <Box className='hero__container__overlay__content__description'>
+                <Box>
+                  <h2> Software Engineer </h2>
+                  <h2> San Francisco, CA </h2>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+        <ParallaxBanner
+          layers={[
+            {
+              speed: -20,
+              children: (
+                <Box>
+                  
+                </Box>
+              ),
+            }
+          ]}
+          className='parallax'
+        />
+      </ParallaxProvider>
+    </Box>
+  );
+};
+
+/*
+<ParallaxProvider>
         <ParallaxBanner
           layers={[
             { image: lisbonCathedral, speed: -20 },
@@ -56,9 +106,15 @@ const Landing = (): JSX.Element => {
             {
               speed: -20,
               children: (
-                <Box className='landing--content'>
+                <motion.div 
+                  ref={ref}
+                  initial='hidden'
+                  animate={control}
+                  variants={parallaxContentVariant}
+                  className='landing--content'
+                >
                   <h2> text 123 </h2>
-                </Box>
+                </motion.div>
               ),
             }
           ]}
@@ -76,18 +132,6 @@ const Landing = (): JSX.Element => {
           </Box>
         </ParallaxBanner>
       </ParallaxProvider>
-    </Box>
-  );
-};
-
-/*{mockText.map((item, id) => (
-  <div key={id}>
-    <ParallaxProvider>
-      <Parallax  speed={item.speed}>
-        <p className='p'> {item.text} </p>
-      </Parallax>
-    </ParallaxProvider>
-  </div>
-))}*/
+*/
 
 export default Landing;

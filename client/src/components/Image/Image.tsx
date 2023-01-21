@@ -7,11 +7,11 @@ import '../../sass/components/_image.scss';
 
 interface IImage {
   src: string;
-  title: string;
+  alt: string;
   className: string;
 }
 
-const Image = ({ src, title, className }: IImage): JSX.Element => {
+const Image = ({ src, alt, className }: IImage): JSX.Element => {
   const [isLoaded, setLoaded] = useState(false);
 
   const handleIsLoaded = () => {
@@ -27,7 +27,7 @@ const Image = ({ src, title, className }: IImage): JSX.Element => {
           <Skeleton variant='rectangular' /> :  
           <></>
       }
-      <img onLoad={handleIsLoaded} className={className} src={src} alt={title} />
+      <img onLoad={handleIsLoaded} className={className} src={src} alt={alt} />
     </Box>
   );
 };

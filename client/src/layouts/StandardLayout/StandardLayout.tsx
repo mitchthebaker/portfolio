@@ -7,6 +7,7 @@ import '../../sass/layout/_standardlayout.scss';
 
 // components 
 import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
 
 interface IStandardLayout {
   children: React.ReactNode;
@@ -28,6 +29,7 @@ const StandardLayout = ({ children }: IStandardLayout): JSX.Element => {
     <Box className='standard-layout'>
       <Nav />
       { children }
+      <Footer />
     </Box>
   );
 };
