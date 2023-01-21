@@ -113,7 +113,6 @@
 
     &__content {
       @include flex(column, center, flex-start, wrap);
-      width: 100%;
       margin: 0.5rem 0.5rem 2rem 0.5rem;
 
       & .arrow__right__down {

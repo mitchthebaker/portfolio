@@ -1,6 +1,6 @@
 // libraries
 import React, { useEffect, useRef } from 'react';
-import { Box } from '@mui/material';
+import { Box, Avatar } from '@mui/material';
 import { 
   motion, 
   useAnimation,
@@ -27,6 +27,7 @@ import ggBridge from './ggBridge.jpg';
 import lisbonCathedral from './lisbon.jpg';
 import techPurple from './technology-purple.mp4';
 import techPurplePlaceholder from './technology-purple-placeholder.png';
+import mbaker from '../../assets/images/mbaker.jpg';
 
 import arrowRightDown from '../../assets/images/arrow-right-down.svg';
 
@@ -62,6 +63,11 @@ const Landing = (): JSX.Element => {
                   <h2> Software Engineer </h2>
                   <h2> San Francisco, CA </h2>
                 </Box>
+                <Avatar 
+                  alt='Mitchel Baker' 
+                  src={mbaker}
+                  sx={{ width: 55, height: 55, marginLeft: '4rem' }}
+                />
               </Box>
             </Box>
           </Box>
