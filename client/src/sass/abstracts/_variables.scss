@@ -1,0 +1,56 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+// Font sizes for headings
+$h1-font-sizes: (
+  null: 32px,
+  $screen-sm-min: 34px,
+  $screen-md-min: 34px,
+  $screen-lg-min: 40px,
+  $screen-xl-min: 40px
+);
+
+$h2-font-sizes: (
+  null: 24px,
+  $screen-sm-min: 24px,
+  $screen-md-min: 24px,
+  $screen-lg-min: 24px,
+  $screen-xl-min: 24px
+);
+
+$h3-font-sizes: (
+  null: 18px,
+  $screen-sm-min: 18px,
+  $screen-md-min: 18px,
+  $screen-lg-min: 18px,
+  $screen-xl-min: 18px
+);
+
+$h4-font-sizes: (
+  null: 16px,
+  $screen-sm-min: 16px,
+  $screen-md-min: 16px,
+  $screen-lg-min: 16px,
+  $screen-xl-min: 16px
+);
+
+$h5-font-sizes: (
+  null: 13px,
+  $screen-sm-min: 13px,
+  $screen-md-min: 13px,
+  $screen-lg-min: 13px,
+  $screen-xl-min: 13px
+);
+
+
+$default-typography-color: white;

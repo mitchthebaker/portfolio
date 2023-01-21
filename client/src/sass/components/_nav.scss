@@ -1,0 +1,26 @@
+@import '../abstracts/mixins';
+
+.nav {
+  @include grid-column(col1, col3);
+  @include grid-row(row1, row2);
+  @include flex(column, center, center, nowrap);
+  background-color: transparent !important;
+  box-shadow: none !important;
+  height: 75px;
+  z-index: 20;
+
+  & .toolbar {
+    @include flex(row, flex-start !important, center, nowrap);
+    width: 95%;
+  
+    & .navigation {
+      margin-left: auto;
+    }
+  }
+  
+  & .progress {
+    width: 100%;
+    height: 5px;
+    background: white;
+  }
+}
