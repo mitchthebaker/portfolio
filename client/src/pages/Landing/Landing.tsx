@@ -25,7 +25,7 @@ import ParallaxText from '../../components/ParallaxText';
 // images 
 import ggBridge from './ggBridge.jpg';
 import lisbonCathedral from './lisbon.jpg';
-import techPurple from './technology-purple.mp4';
+import techPurple from './technology-purple-compressed.mp4';
 import techPurplePlaceholder from './technology-purple-placeholder.png';
 import mbaker from '../../assets/images/mbaker.jpg';
 
