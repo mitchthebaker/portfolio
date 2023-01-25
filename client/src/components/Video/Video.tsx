@@ -30,8 +30,10 @@ const Video = ({ src, placeholder, placeholderAlt, className }: IVideo) => {
         onLoadedData={handleIsLoaded}
         style={{ opacity: loaded ? 1 : 0 }}
         loop
-        autoPlay
-        muted
+        autoPlay={true}
+        muted={true}
+        playsInline={true}
+        preload='metadata'
       >
         <source src={src} type='video/mp4' />
       </video>
