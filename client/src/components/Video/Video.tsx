@@ -32,8 +32,7 @@ const Video = ({ src, placeholder, placeholderAlt, className }: IVideo) => {
         controls={false}
 	      loop
         autoPlay={true}
-        defaultMuted
-	muted={true}
+	      muted={true}
         playsInline={true}
         preload='metadata'
       >
