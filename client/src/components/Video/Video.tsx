@@ -30,7 +30,7 @@ const Video = ({ src, placeholder, placeholderAlt, className }: IVideo) => {
       )}
       <video
         ref={videoRef}
-        onLoadedData={handleIsLoaded}
+        onLoadedMetadata={handleIsLoaded}
         controls={false}
         loop
         autoPlay={true}
