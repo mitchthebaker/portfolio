@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { createRef, useState } from 'react';
 import { Box } from '@mui/material';
 
 interface IVideo {
@@ -10,9 +10,11 @@ interface IVideo {
 
 const Video = ({ src, placeholder, placeholderAlt, className }: IVideo) => {
   const [loaded, setLoaded] = useState<boolean>(false);
+  const videoRef = createRef<HTMLVideoElement>();
 
   const handleIsLoaded = () => {
     setLoaded(!loaded);
+    videoRef.current?.play();
   };
 
   return (
@@ -27,8 +29,8 @@ const Video = ({ src, placeholder, placeholderAlt, className }: IVideo) => {
         />
       )}
       <video
+        ref={videoRef}
         onLoadedData={handleIsLoaded}
-        style={{ opacity: loaded ? 1 : 0 }}
         controls={false}
         loop
         autoPlay={true}
